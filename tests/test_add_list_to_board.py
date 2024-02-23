@@ -11,7 +11,7 @@ def test_add_list_to_board(api_client, trello_credentials, create_board, create_
     Helpers.check_list(list_id)
 
     Helpers.check_success(api_client.get(
-        f"{Endpoints.BASE_URL}/{Endpoints.CARDS}/{list_id}",
+        f"{Endpoints.BASE_URL}/{Endpoints.LISTS}/{list_id}",
         params={'key': api_key, 'token': api_token})
     )
 
